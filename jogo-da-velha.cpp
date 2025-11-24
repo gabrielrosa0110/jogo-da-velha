@@ -388,7 +388,7 @@ int main()
             else if (resultado == 2)
 			{
                 jogo(tabuleiro);
-                cout << ">>> " << jogador2.nome << " (O) venceu! <<<\n";
+                cout << ">>> " << jogador2.nome << " (O) venceu! <<< " << endl;
                 jogador2.pontuacao++;
                 Resultado(arq, jogador1, jogador2, 2);
                 acabou = 1;
@@ -396,7 +396,7 @@ int main()
             else if (resultado == 3)
 			{
                 jogo(tabuleiro);
-                cout << ">>> Empate! <<<\n";
+                cout << ">>> Empate! <<< " << endl;
                 Resultado(arq, jogador1, jogador2, 3);
                 acabou = 1;
             } 
