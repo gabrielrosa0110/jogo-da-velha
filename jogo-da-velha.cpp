@@ -173,7 +173,8 @@ int Vencedor(Tabuleiro t)
 	int j;
 	int livres;
 	
-	// retorna quem venceu: 1 para X, 2 para O, 3 para empate e 0 caso ninguém venceu ainda	
+	// retorna quem venceu: 1 para X, 2 para O, 3 para empate e 0 caso ninguém venceu ainda
+	
 	//linhas
 	for(i = 0; i < 3; i++)
 	{
@@ -296,6 +297,9 @@ int Historico(string arquivo)
 
 
 
+
+
+
 //onde sera feito a leituras de todas as structs e funções acima
 int main()
 {
@@ -375,7 +379,7 @@ int main()
             
             if (resultado == 1)
 			{
-                Tabuleiro(tabuleiro);
+                jogo(tabuleiro);
                 cout << ">>> " << jogador1.nome << " (X) venceu! <<<" << endl;
                 jogador1.pontuacao++;
                 Resultado(arq, jogador1, jogador2, 1);
@@ -383,7 +387,7 @@ int main()
             } 
             else if (resultado == 2)
 			{
-                Tabuleiro(tabuleiro);
+                jogo(tabuleiro);
                 cout << ">>> " << jogador2.nome << " (O) venceu! <<<\n";
                 jogador2.pontuacao++;
                 Resultado(arq, jogador1, jogador2, 2);
@@ -391,7 +395,7 @@ int main()
             } 
             else if (resultado == 3)
 			{
-                Tabuleiro(tabuleiro);
+                jogo(tabuleiro);
                 cout << ">>> Empate! <<<\n";
                 Resultado(arq, jogador1, jogador2, 3);
                 acabou = 1;
