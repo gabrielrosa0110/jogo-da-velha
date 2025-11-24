@@ -320,7 +320,7 @@ int main()
 
 	
     cout << "Nome do Jogador 1 (X): ";
-    getline(cin, jogador1.nome);
+    getline(cin >> ws, jogador1.nome);
     // .size() diz quantas letras tem no nome.
     if (jogador1.nome.size() == 0)
     {
@@ -331,7 +331,7 @@ int main()
     jogador1.pontuacao = 0;
 
     cout << "Nome do Jogador 2 (O): ";
-    getline(cin, jogador2.nome);
+    getline(cin >> ws, jogador2.nome);
     // .size() diz quantas letras tem no nome.
     if (jogador2.nome.size() == 0)
 	{
