@@ -331,7 +331,7 @@ int main()
     jogador1.pontuacao = 0;
 
     cout << "Nome do Jogador 2 (O): ";
-    getline(cin >> ws, jogador2.nome);
+    getline(cin >> ws,jogador2.nome);
     // .size() diz quantas letras tem no nome.
     if (jogador2.nome.size() == 0)
 	{
@@ -396,7 +396,7 @@ int main()
             else if (resultado == 3)
 			{
                 jogo(tabuleiro);
-                cout << ">>> Empate! <<< " << endl;
+                cout << ">>> Empate! <<<" << endl;
                 Resultado(arq, jogador1, jogador2, 3);
                 acabou = 1;
             } 
@@ -413,8 +413,8 @@ int main()
 		cout << endl;
         cout << "Placar Atual: " << endl;
         // setw(15) define que o nome será impresso ocupando 15 espaços
-        cout << setw(15) << left << jogador1.nome << " : " << jogador1.pontuacao << endl;
-        cout << setw(15) << left << jogador2.nome << " : " << jogador2.pontuacao << endl;
+        cout << jogador1.nome << " : " << jogador1.pontuacao << endl;
+        cout << jogador2.nome << " : " << jogador2.pontuacao << endl;
         
         int trocar;
         
@@ -445,9 +445,8 @@ int main()
 
 	cout << endl;
     cout << "Fim de jogo!" << endl;
-    // setw(15) define que o nome será impresso ocupando 15 espaços
-    cout << setw(15) << left << jogador1.nome << " : " << jogador1.pontuacao << endl;
-    cout << setw(15) << left << jogador2.nome << " : " << jogador2.pontuacao << endl;
+    cout << jogador1.nome << " : " << jogador1.pontuacao << endl;
+    cout << jogador2.nome << " : " << jogador2.pontuacao << endl;
 	
 	
 	
