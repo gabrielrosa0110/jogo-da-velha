@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 
+
 using namespace std;
 
 
@@ -299,6 +300,7 @@ int Historico(string arquivo)
 
 
 
+
 //onde sera feito a leituras de todas as structs e funções acima
 int main()
 {
@@ -307,7 +309,7 @@ int main()
 	Jogador jogador1, jogador2;
 	int jogar_novamente = 1;
 	string arq = "historico_jogo_da_velha.txt";
-	int atual;
+	
 	
 	cout << "----------- Jogo da Velha -----------" << endl;
 	cout << endl;
@@ -411,14 +413,24 @@ int main()
 
 		cout << endl;
         cout << "Placar Atual: " << endl;
-        // setw(15) define que o nome será impresso ocupando 15 espaços
         cout << jogador1.nome << " : " << jogador1.pontuacao << endl;
         cout << jogador2.nome << " : " << jogador2.pontuacao << endl;
+        cout << endl;
+         
         
-        int trocar;
+        cout << "Jogar novamente? (1 = sim / 0 = nao): " << endl;
+        
+        if (!(cin >> jogar_novamente))
+		{
+            limpar();
+            jogar_novamente = 0;
+        }
+        limpar();
         
 		cout << endl;
 		cout << "Deseja trocar os nomes? (1 = sim / 0 = nao): " << endl;
+		
+		int trocar;
 		
 		if (!(cin >> trocar))
 		{
@@ -426,20 +438,19 @@ int main()
     		trocar = 0;
 		}
 		limpar();
-
+		
+	
+		
 		if (trocar == 1)
 		{
     		Nomes(jogador1, jogador2);
+
+    		// zera o placar após a troca de nomes
+    		jogador1.pontuacao = 0;
+    		jogador2.pontuacao = 0;
 		}
        
-        cout << endl;
-        cout << "Jogar novamente? (1 = sim / 0 = nao): " << endl;
-        if (!(cin >> jogar_novamente))
-		{
-            limpar();
-            jogar_novamente = 0;
-        }
-        limpar();
+        
     }
 
 	cout << endl;
