@@ -417,17 +417,8 @@ int main()
         cout << jogador2.nome << " : " << jogador2.pontuacao << endl;
         cout << endl;
          
-        
-        cout << "Jogar novamente? (1 = sim / 0 = nao): " << endl;
-        
-        if (!(cin >> jogar_novamente))
-		{
-            limpar();
-            jogar_novamente = 0;
-        }
-        limpar();
-        
-		cout << endl;
+		
+			
 		cout << "Deseja trocar os nomes? (1 = sim / 0 = nao): " << endl;
 		
 		int trocar;
@@ -449,7 +440,15 @@ int main()
     		jogador1.pontuacao = 0;
     		jogador2.pontuacao = 0;
 		}
-       
+		
+       cout << "Jogar novamente? (1 = sim / 0 = nao): " << endl;
+        
+        if (!(cin >> jogar_novamente))
+		{
+            limpar();
+            jogar_novamente = 0;
+        }
+        limpar();
         
     }
 
